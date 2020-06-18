@@ -34,12 +34,36 @@ mainElement.append(linkElement);
 
 // function the button to remove main element....
 
-button.onclick = function() {
+button.addEventListener("click", function() {
     mainElement.remove();
-}
+})
+
+
+// creat an add element buttom.....
+
+let inputElement = document.createElement("input")
+inputElement.type = "text";
+inputElement.id = 5;
+bodyElement.append(inputElement);
+
+// creat button to the add element....
+let textButton = document.createElement("button");
+textButton.id = 6;
+textButton.append("creay Div");
+bodyElement.append(textButton);
 
 
 
+let divElement = document.createElement("div");
+bodyElement.append(divElement);
+
+// function the text button...
+
+textButton.addEventListener("click", function() {
+    let textValue = inputElement.value;
+    divElement.append(textValue);
+
+})
 
 
 
